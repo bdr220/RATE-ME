@@ -1,0 +1,176 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+h1 h2{
+    text-align: center;
+}
+header{
+ height: 150px;
+ width: 100%;
+ background-color: black;
+ 
+}
+.signin{
+    float: right;
+    font-size: large;
+    color: white;
+    text-decoration: none;
+}
+.signin a:hover{
+ text-decoration: underline;
+
+}
+ul li{
+ color: white;
+ display: initial;
+ margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: solid white;
+  border-right: solid white;
+  border-width: 1px;
+  padding: 1.2px;
+  margin-right: 1px;
+  
+}
+ul{
+    float: right;
+    margin-top: 120px;
+}
+
+a.logo img{
+ 
+width: 170px;
+ margin: 0;
+ padding: 0;
+  
+}
+.wrapper{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    padding: 10px;
+   
+}
+input{
+    text-align: right;
+}
+.hee1{
+    position: absolute;
+    top: 225px;
+    left: 50%;
+}
+.hee2{
+    position: absolute;
+    top: 550px;
+    left: 50%;
+}
+.sec{
+    position: absolute;
+    left: 30%;
+    display: inline;
+}
+.sec1{
+    color: black;
+    background-color: cornflowerblue;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    
+    
+}
+.sec2{
+    color: black;
+    background-color: plum;
+    display: inline-block;
+    width: 250px;
+    height: 150px;
+    
+}
+.secb{
+    position: absolute;
+    left: 30%;
+    top: 500px;
+}
+.sec3{
+    color: black;
+    background-color: cornflowerblue;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+}
+.sec4{
+    color: black;
+    background-color: plum;
+    display: inline-block;
+    width: 250px;
+    height: 150px;
+    
+}
+@media screen and (max-width:700px) {
+   header{
+    height: 250px;
+   }
+   a.logo img{
+ 
+    width: 100px;
+     margin: 0;
+     padding: 0;
+      
+    }
+   .wrapper{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    padding: 10px;
+   
+}
+.hee1{
+    position: absolute;
+    top: 33%;
+    left: 50%;
+}
+.sec{
+    position: absolute;
+    left: 25%;
+    display: flex;
+}
+.sec1{
+    color: black;
+    background-color: cornflowerblue;
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+}
+.sec2{
+    color: black;
+    background-color: plum;
+    display: inline-block;
+    width: 70px;
+    height: 100px;
+    
+}
+.secb{
+    position: absolute;
+    left: 25%;
+    top: 500px;
+    display: flex;
+}
+.sec3{
+    color: black;
+    background-color: cornflowerblue;
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+}
+.sec4{
+    color: black;
+    background-color: plum;
+    display: inline-block;
+    width: 70px;
+    height: 100px;
+    
+}
+
+
+}
