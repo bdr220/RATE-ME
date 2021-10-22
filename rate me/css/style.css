@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("../img/backG3.jpg");
+    
+    background-size: cover;
+}
+header{
+    background-color: rgba(255, 255, 255, 0.603);
+
+ 
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10%;
+    font-weight: bold;
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.menu-bar{
+    text-align: center;
+    color: white;
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+}
+.menu-bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 5px;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: black;
+}
+.active, .menu-bar ul li:hover{
+ background-color:whitesmoke;
+
+ border-radius: 3px;
+}
+.sub-menu{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    background: whitesmoke;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+.menu-bar ul li:hover .sub-menu ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted black;
+    background: transparent;
+    text-align: right;
+}
+.menu-bar ul li:hover .sub-menu ul li:last-child{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu ul li a:hover{
+    color: black;
+    font-size: 20px;
+}
+section{
+    background-color: rgba(255, 255, 255, 0.603);
+    padding: 50px;
+    margin: 60px;
+    
+    height: max-content;
+    border-radius: 5%;
+}
+img{
+    width: 200px;
+}
