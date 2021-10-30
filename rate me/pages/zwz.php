@@ -26,16 +26,38 @@ if (isset($_GET['logout'])) {
     <title>page</title>
 
     <style>
+ 
         IMG.displayed {
             display: block;
             margin-left: auto;
-            margin-right: auto
+            margin-right: auto;
         }
     </style>
 </head>
 
 <body>
     <a href="../pages/login.php"><i class="fas fa-user" style="color:white; font-size: 30px;"></i></a>
+      <!-- هاذي علامه الخروج غيرت مكانها هنا -->
+  <a href="index.php?logout='1'" style="color: white ;"><i  style="float:right; font-size: 35px;" class="fas fa-sign-out-alt "></i></a>
+  <div class="content">
+      <!-- notification message -->
+      <?php if (isset($_SESSION['success'])) : ?>
+        <div class="error success">
+          <h3>
+            <?php
+            echo $_SESSION['success'];
+            unset($_SESSION['success']);
+            ?>
+          </h3>
+        </div>
+      <?php endif ?>
+
+      <!-- logged in user information -->
+      <?php if (isset($_SESSION['username'])) : ?>
+        <p> <strong><?php echo $_SESSION['username']; ?></strong></p>
+        
+      <?php endif ?>
+    </div>
     <header>
 
         <div class="menu-bar">
@@ -58,34 +80,19 @@ if (isset($_GET['logout'])) {
 
             </ul>
         </div>
-        <div class="content">
-      <!-- notification message -->
-      <?php if (isset($_SESSION['success'])) : ?>
-        <div class="error success">
-          <h3>
-            <?php
-            echo $_SESSION['success'];
-            unset($_SESSION['success']);
-            ?>
-          </h3>
-        </div>
-      <?php endif ?>
-
-      <!-- logged in user information -->
-      <?php if (isset($_SESSION['username'])) : ?>
-        <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-        <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
-      <?php endif ?>
-    </div>
+      
     </header>
     <a href="../pages/index.php"><IMG class="displayed" src="../img/logo.png" alt="..."></a>
     <section>
-        <div class="text-center">
-            <img src="../img/re1/zwz.png" class="rounded" alt="...">
-            <h3>زعتر وزيت</h3>
-            <button type="button" class="btn btn-light" style="font-size: 30px;"><a href="../pages/rating.php"
-                    style="text-decoration: none; color: black;"> قيم المنشأة</a></button>
+      
+      <div class="card" style="width: 18rem; margin-left: auto; text-align: center;">
+        <img src="../img/re1/zwz.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">زيت وزعتر</h5>
+          <p class="card-text">فطور</p>
+          <a href="../pages/rating.php" class="btn btn-primary stretched-link">قيم</a>
         </div>
+      </div>
 
     </section>
     <script></script>

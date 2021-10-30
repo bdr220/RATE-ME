@@ -35,6 +35,27 @@ if (isset($_GET['logout'])) {
 
 <body>
   <a href="../pages/login.php"><i class="fas fa-user" style="color:white; font-size: 30px;"></i></a>
+   <!-- هاذي علامه الخروج غيرت مكانها هنا -->
+  <a href="index.php?logout='1'" style="color: white ;"><i  style="float:right; font-size: 35px;" class="fas fa-sign-out-alt "></i></a>
+  <div class="content">
+      <!-- notification message -->
+      <?php if (isset($_SESSION['success'])) : ?>
+        <div class="error success">
+          <h3>
+            <?php
+            echo $_SESSION['success'];
+            unset($_SESSION['success']);
+            ?>
+          </h3>
+        </div>
+      <?php endif ?>
+
+      <!-- logged in user information -->
+      <?php if (isset($_SESSION['username'])) : ?>
+        <p> <strong><?php echo $_SESSION['username']; ?></strong></p>
+        
+      <?php endif ?>
+    </div>
   <header>
     <div class="container">
       <div class="menu-bar">
@@ -59,25 +80,7 @@ if (isset($_GET['logout'])) {
       </div>
     </div>
 
-    <div class="content">
-      <!-- notification message -->
-      <?php if (isset($_SESSION['success'])) : ?>
-        <div class="error success">
-          <h3>
-            <?php
-            echo $_SESSION['success'];
-            unset($_SESSION['success']);
-            ?>
-          </h3>
-        </div>
-      <?php endif ?>
-
-      <!-- logged in user information -->
-      <?php if (isset($_SESSION['username'])) : ?>
-        <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-        <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
-      <?php endif ?>
-    </div>
+    
   </header>
   <a href="../pages/index.php"><IMG class="displayed" src="../img/logo.png" alt="..."></a>
 
