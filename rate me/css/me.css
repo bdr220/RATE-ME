@@ -1,0 +1,10 @@
+.yo{
+    color:black;
+   font-size: 30px;
+    margin: 5px;
+    
+}
+.yo:hover{
+    color: cornflowerblue;
+   
+}
